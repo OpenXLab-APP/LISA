@@ -7,11 +7,9 @@ import bleach
 import sys
 import os
 
-# os.system("git clone https://github.com/timdettmers/bitsandbytes.git")
-# os.system("cd bitsandbytes")
-# os.system("CUDA_VERSION=113 make cuda11x")
-# os.system("python setup.py install")
-# os.system("cd ..")
+if not os.path.exists('./bitsandbytes'):
+    os.system("git clone https://github.com/timdettmers/bitsandbytes.git")
+os.system("cd bitsandbytes && CUDA_VERSION=113 make cuda11x && python setup.py install && cd ..")
 
 import cv2
 import argparse
