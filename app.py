@@ -20,15 +20,15 @@ from model.segment_anything.utils.transforms import ResizeLongestSide
 
 def parse_args(args):
   parser = argparse.ArgumentParser(description='LISA chat')
-  parser.add_argument('--version', default='xinlai/LISA-13B-llama2-v0')
+  parser.add_argument('--version', default='xinlai/LISA-13B-llama2-v0-explanatory')
   parser.add_argument('--vis_save_path', default='./vis_output', type=str)
-  parser.add_argument('--precision', default='bf16', type=str, choices=['fp32', 'bf16', 'fp16'], help="precision for inference")
+  parser.add_argument('--precision', default='fp16', type=str, choices=['fp32', 'bf16', 'fp16'], help="precision for inference")
   parser.add_argument('--image-size', default=1024, type=int, help='image size')
   parser.add_argument('--model-max-length', default=512, type=int)
   parser.add_argument('--lora-r', default=-1, type=int)
   parser.add_argument('--vision-tower', default='openai/clip-vit-large-patch14', type=str)
   parser.add_argument('--local-rank', default=0, type=int, help='node rank')
-  parser.add_argument('--load_in_8bit', action='store_true', default=False)
+  parser.add_argument('--load_in_8bit', action='store_true', default=True)
   parser.add_argument('--load_in_4bit', action='store_true', default=False)
   return parser.parse_args(args)
 
