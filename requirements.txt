@@ -17,3 +17,4 @@ transformers==4.31.0
 uvicorn==0.23.2
 bitsandbytes
 sentencepiece
+accelerate
