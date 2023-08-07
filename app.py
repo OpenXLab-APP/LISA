@@ -260,4 +260,4 @@ demo = gr.Interface(
 
 demo.queue()
 
-demo.launch(server_name='0.0.0.0', show_error=True)
+demo.launch()
