@@ -35,8 +35,8 @@ def parse_args(args):
   parser.add_argument('--lora-r', default=-1, type=int)
   parser.add_argument('--vision-tower', default='openai/clip-vit-large-patch14', type=str)
   parser.add_argument('--local-rank', default=0, type=int, help='node rank')
-  parser.add_argument('--load_in_8bit', action='store_true', default=True)
-  parser.add_argument('--load_in_4bit', action='store_true', default=False)
+  parser.add_argument('--load_in_8bit', action='store_true', default=False)
+  parser.add_argument('--load_in_4bit', action='store_true', default=True)
   return parser.parse_args(args)
 
 def preprocess(x, 
