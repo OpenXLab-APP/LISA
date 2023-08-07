@@ -11,13 +11,7 @@ import subprocess
 
 if not os.path.exists('./bitsandbytes'):
     commands = [
-        "git clone https://github.com/timdettmers/bitsandbytes.git",
-        "cd bitsandbytes",
-        "CUDA_VERSION=113 make cuda11x",
-        "python setup.py install",
-        "cd ..",
-        "rm -r bitsandbytes",
-        "export PYTHONPATH=./"
+        "git clone https://github.com/timdettmers/bitsandbytes.git && cd bitsandbytes && CUDA_VERSION=113 make cuda11x && python setup.py install && cd .. && rm -r bitsandbytes && export PYTHONPATH=./"
     ]
     for command in commands:
         subprocess.run(command, shell=True, check=True, executable="/bin/bash")
