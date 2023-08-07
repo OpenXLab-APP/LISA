@@ -9,7 +9,7 @@ import os
 
 if not os.path.exists('./bitsandbytes'):
     os.system("git clone https://github.com/timdettmers/bitsandbytes.git")
-    os.system("cd bitsandbytes && CUDA_VERSION=113 make cuda11x && python setup.py install && cd ..")
+    os.system("cd bitsandbytes && CUDA_VERSION=113 make cuda11x && python setup.py install && cd .. && rm -r bitsandbytes && export PYTHONPATH=./")
 
 import cv2
 import argparse
