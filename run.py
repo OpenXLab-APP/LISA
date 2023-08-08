@@ -22,7 +22,7 @@ from model.segment_anything.utils.transforms import ResizeLongestSide
 
 def parse_args(args):
   parser = argparse.ArgumentParser(description='LISA chat')
-  parser.add_argument('--version', default='./LISA-13B-llama2-v0-explanatory')
+  parser.add_argument('--version', default='./LISA-13B-llama2-v0-explainatory')
   parser.add_argument('--vis_save_path', default='./vis_output', type=str)
   parser.add_argument('--precision', default='fp16', type=str, choices=['fp32', 'bf16', 'fp16'], help="precision for inference")
   parser.add_argument('--image-size', default=1024, type=int, help='image size')
