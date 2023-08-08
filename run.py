@@ -257,8 +257,7 @@ demo = gr.Interface(
     description=description,
     article=article,
     examples=examples,
-    allow_flagging='auto',
-    flagging_dir='/data/lisa_flagging_data')
+    allow_flagging='auto')
 
 demo.queue()
 
