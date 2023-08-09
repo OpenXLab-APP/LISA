@@ -19,7 +19,7 @@ from transformers import AutoTokenizer, CLIPImageProcessor
 from model.LISA import LISA
 from utils.conversation import get_default_conv_template
 from model.segment_anything.utils.transforms import ResizeLongestSide
-
+ 
 def parse_args(args):
   parser = argparse.ArgumentParser(description='LISA chat')
   parser.add_argument('--version', default='./LISA-13B-llama2-v0-explainatory')
