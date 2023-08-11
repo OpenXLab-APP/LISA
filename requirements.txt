@@ -18,5 +18,5 @@ uvicorn==0.23.2
 sentencepiece
 accelerate
 scipy
-
+bitsandbytes
 
