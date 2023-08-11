@@ -5,10 +5,8 @@ NUM_SENTINEL_TOKENS: int = 100
 
 def adapt_tokenizer_for_denoising(tokenizer: Tokenizer):
     """Adds sentinel tokens and padding token (if missing).
-
     Expands the tokenizer vocabulary to include sentinel tokens
     used in mixture-of-denoiser tasks as well as a padding token.
-
     All added tokens are added as special tokens. No tokens are
     added if sentinel tokens and padding token already exist.
     """
@@ -24,10 +22,8 @@ def adapt_tokenizer_for_denoising(tokenizer: Tokenizer):
 
 class AutoTokenizerForMOD(AutoTokenizer):
     """AutoTokenizer + Adaptation for MOD.
-
     A simple wrapper around AutoTokenizer to make instantiating
     an MOD-adapted tokenizer a bit easier.
-
     MOD-adapted tokenizers have sentinel tokens (e.g., <extra_id_0>),
     a padding token, and a property to get the token ids of the
     sentinel tokens.
