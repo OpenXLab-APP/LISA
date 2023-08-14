@@ -75,6 +75,7 @@ args.precision,
 load_in_8bit=args.load_in_8bit,
 load_in_4bit=args.load_in_4bit,
 )
+print(args.version)
 
 weight = {}
 visual_model_weight = torch.load(os.path.join(args.version, "pytorch_model-visual_model.bin"))
