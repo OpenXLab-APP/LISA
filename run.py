@@ -51,6 +51,7 @@ def preprocess(x,
 
 args = parse_args(sys.argv[1:])
 os.makedirs(args.vis_save_path, exist_ok=True)
+print(args.version)
 
 # Create model
 tokenizer = transformers.AutoTokenizer.from_pretrained(
@@ -75,7 +76,6 @@ args.precision,
 load_in_8bit=args.load_in_8bit,
 load_in_4bit=args.load_in_4bit,
 )
-print(args.version)
 
 weight = {}
 visual_model_weight = torch.load(os.path.join(args.version, "pytorch_model-visual_model.bin"))
