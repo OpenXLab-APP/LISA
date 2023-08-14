@@ -1,5 +1,5 @@
 {
-  "_name_or_path": "/home/xlab-app-center",
+  "_name_or_path": "liuhaotian/llava-llama-2-13b-chat-lightning-preview",
   "architectures": [
     "LlavaLlamaForCausalLM"
   ],
