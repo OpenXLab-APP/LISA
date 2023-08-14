@@ -8,7 +8,7 @@ import sys
 import os
 
 if not os.path.exists('./bitsandbytes'):
-    os.system("git clone https://github.com/timdettmers/bitsandbytes.git && cd bitsandbytes && CUDA_VERSION=113 make cuda11x && python setup.py install && cd .. && rm -r bitsandbytes && export PYTHONPATH=./ && python3 run.py")
+    os.system("git clone https://github.com/timdettmers/bitsandbytes.git && cd bitsandbytes && CUDA_VERSION=113 make cuda11x && python setup.py install && cd .. && rm -r bitsandbytes && export PYTHONPATH=./ && python3 run.py && git lfs install && git lfs pull")
 
 from openxlab.model import download
 download(model_repo='openxlab-app/pytorch_model-text_hidden_fcs.bin', 
