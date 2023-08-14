@@ -12,3 +12,18 @@ if not os.path.exists('./bitsandbytes'):
 
 ## && python git-lfs install && git lfs clone https://huggingface.co/spaces/xinlai/LISA/tree/main/LISA-13B-llama2-v0-explainatory.git && cd LISA-13B-llama2-v0-explainatory && git lfs track
 
+from openxlab.model import download
+download(model_repo='openxlab-app/pytorch_model-text_hidden_fcs.bin', 
+model_name='pytorch_model-text_hidden_fcs.bin')
+
+download(model_repo='openxlab-app/pytorch_model-text_hidden_fcs.bin', 
+model_name='pytorch_model-00001-of-00003.bin')
+
+download(model_repo='openxlab-app/pytorch_model-text_hidden_fcs.bin', 
+model_name='pytorch_model-00002-of-00003.bin')
+
+download(model_repo='openxlab-app/pytorch_model-text_hidden_fcs.bin', 
+model_name='pytorch_model-00003-of-00003.bin')
+
+download(model_repo='openxlab-app/pytorch_model-text_hidden_fcs.bin', 
+model_name='pytorch_model-visual_model.bin')
