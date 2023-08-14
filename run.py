@@ -51,7 +51,7 @@ def preprocess(x,
 
 args = parse_args(sys.argv[1:])
 os.makedirs(args.vis_save_path, exist_ok=True)
-print(args.version)
+print('args.version =', args.version)
 
 # Create model
 tokenizer = transformers.AutoTokenizer.from_pretrained(
