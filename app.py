@@ -8,6 +8,7 @@ import sys
 import os
 
 from huggingface_hub import snapshot_download
+os.environ['CURL_CA_BUNDLE'] = ''
 snapshot_download(repo_id="xinlai/LISA-13B-llama2-v0-explanatory",  allow_patterns='*.bin', local_dir='./LISA-13B-llama2-v0-explainatory',local_dir_use_symlinks=True)
 
 if not os.path.exists('./bitsandbytes'):
